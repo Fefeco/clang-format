@@ -6,4 +6,4 @@ if [ "$#" -lt 1 ]; then
 fi
 
 # Ejecuta el contenedor Docker con los argumentos pasados
-docker run -v $(pwd):/usr/src/app clang-format bash -c "clang-format $*"
+docker run --rm -v $(pwd):/usr/src/app clang-format bash -c "clang-format $*"
